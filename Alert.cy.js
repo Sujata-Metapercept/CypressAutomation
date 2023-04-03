@@ -8,7 +8,7 @@ describe('Alert', () => {
         cy.on('window:alert', (str) => {
             expect(str).to.equal('Your full name cannot be blank.\nPlease enter your firstname and lastname e.g. Sameer Bhagwat')
 
-            //Confirmation Window
+            //Confirmation Windows
 
 
         })

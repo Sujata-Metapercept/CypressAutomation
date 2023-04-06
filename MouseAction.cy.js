@@ -31,9 +31,49 @@ it('3 Double clickClick Action(Contex Click)', function () {
       cy.visit("https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_ev_ondblclick3");
       cy.frameLoaded('#iframeResult')
       
-      cy.iframe('#iframeResult').find('/html/body/button').dblclick()
+      cy.iframe('#iframeResult').find(".gb_h.gbii").dblclick()
+
+      
 
    });
+
+
+   //Drag and droup approch
+
+   it('4 Drag and Drop)', function () {
+      //    // launch URL
+      cy.visit("http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html");
+      cy.get("#box6").drag('#box106',{force:true});
+      cy.wait(5000)
+
+
+     });
+ // Scolling Page
+ it.only('Scrooling Page)', function () {
+   //    // launch URL
+   cy.visit("https://www.countries-ofthe-world.com/flags-of-asia.html");
+   // India flag
+   cy.get(" img[alt='Flag of India']").scrollIntoView({duration:4000})
+
+ 
+   cy.get(" img[alt='Flag of India']").should('be.visible')
+   cy.wait(5000)
+// 
+cy.xpath("//td[normalize-space()='Armenia']").scrollIntoView({duration:4000})
+
+cy.xpath("//td[normalize-space()='Armenia']").should('be.visible')
+cy.get('footer').scrollIntoView()
+  });
+
+  it('Scroll )', function () {
+   //    // launch URL
+   cy.visit("https://docs.cypress.io/plugins");
+   cy.wait(5000)
+  
+
+
+  });
+
 });
 
 

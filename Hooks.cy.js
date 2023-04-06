@@ -13,7 +13,7 @@ describe('Hooks', function() {
    })
    afterEach(function() {
       // executes post each test within it block
-      cy.log("AfterEac hook")
+      cy.log("AfterEach hook")
    })
    it('First Test', function() {
       cy.log("First Test")
